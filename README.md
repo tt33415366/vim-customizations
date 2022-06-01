@@ -3,7 +3,7 @@
 Changing to your vim's home directory(mostly just `~/.vim`), and executing the following commands.
 ```shell
 $git init
-$git remote add origin <url of this reposity>
+$git remote add origin <url of this repository>
 $git pull origin main --allow-unrelated-histories
 ```
 ## Enabling the custom configurations
