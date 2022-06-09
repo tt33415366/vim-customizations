@@ -17,4 +17,3 @@ let g:airline_symbols.linenr = ' LN:'
 " set laststatus=2
 " set showtabline=2
 set noshowmode
-let g:rainbow_active = 1

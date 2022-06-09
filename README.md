@@ -14,5 +14,6 @@ source $HOME/.vim/config/lea-basic.vim
 source $HOME/.vim/config/kmaps.vim
 source $HOME/.vim/config/fzf.vim
 source $HOME/.vim/config/airline.vim
+source $HOME/.vim/config/rainbow.vim
 source $HOME/.vim/config/gtags.vim
 ```
