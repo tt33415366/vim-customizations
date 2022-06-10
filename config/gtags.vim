@@ -36,3 +36,10 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 " 禁用 gutentags 自动加载 gtags 数据库的行为，
 " 避免多个项目的数据库相互影响
 let g:gutentags_auto_add_gtags_cscope = 0
+
+" Enable gutentags debug tracing
+" View with `:messages`
+" let g:gutentags_trace = 1
+
+" change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
