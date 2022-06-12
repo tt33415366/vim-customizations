@@ -1,5 +1,18 @@
 " Gutentags is a plugin that takes care of the much needed management of tags files in Vim.
 " It requires following three plugins to work with.
+"
+" Default Key Maps
+"   <leader>cs	Find symbol (reference) under cursor
+"   <leader>cg	Find symbol definition under cursor
+"   <leader>cd	Functions called by this function
+"   <leader>cc	Functions calling this function
+"   <leader>ct	Find text string under cursor
+"   <leader>ce	Find egrep pattern under cursor
+"   <leader>cf	Find file name under cursor
+"   <leader>ci	Find files #including the file name under cursor
+"   <leader>ca	Find places where current symbol is assigned
+"   <leader>cz	Find current word in ctags database
+"
 " gtags is also required: apt install global
 " Plugin 'ludovicchabant/vim-gutentags'
 " Plugin 'skywind3000/gutentags_plus'
