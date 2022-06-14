@@ -22,4 +22,4 @@ set foldmethod=syntax
 set foldlevelstart=99
 
 " Auto generate tags file on file write of *.c and *.h files
-autocmd BufWritePost *.c,*.h silent! !ctags . &
+autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
