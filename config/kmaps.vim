@@ -10,3 +10,6 @@ nmap <C-l> :TagbarToggle<cr>
 nmap <leader>fw :lv /<c-r>=expand("<cword>")<esc>/ %<cr>:lw<cr>
 " Search the current search pattern in the location window
 nmap <leader>fs :lv // %<cr>:lw<cr>
+" Disable the annoying 'Press ENTER to continue' message
+nnoremap K K<CR>
+vnoremap K K<CR>
