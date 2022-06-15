@@ -11,6 +11,8 @@ set showmatch
 set hlsearch
 set tag=tags;
 set autochdir
+set autowrite   " Automatically save before commands like :next and :make
+set hidden      " Hide buffers when they are abandoned
 " set mouse=a
 filetype on
 highlight leastyle term=bold cterm=bold ctermfg=red
