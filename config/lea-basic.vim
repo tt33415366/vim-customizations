@@ -23,5 +23,24 @@ set foldmethod=syntax
 " Default not fold up
 set foldlevelstart=99
 
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  augroup redhat
+    " In text files, always limit the width of text to 78 characters
+    autocmd BufRead *.txt set tw=78
+    " When editing a file, always jump to the last cursor position
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
+  augroup END
+  " Enabling VIM to load plugins and indention rules based on the detected
+  " filetype.
+  filetype plugin indent on
+endif
+
 " Auto generate tags file on file write of *.c and *.h files
 autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
+
+" Enable viewing manpage with vim via Man command
+runtime! ftplugin/man.vim
