@@ -20,8 +20,8 @@ if has("autocmd")
   augroup syntax_fold
     " Clear all autocmds in this group.
     autocmd!
-	autocmd BufNewFile,BufReadPre *.h,*.c,*.cpp,*.cc setlocal foldmethod=syntax
-	autocmd BufWinEnter  *.h,*.c,*.cpp,*.cc if &fdm == 'syntax' | setlocal foldmethod=manual | endif
+    autocmd BufNewFile,BufReadPre *.h,*.c,*.cpp,*.cc setlocal foldmethod=syntax
+    autocmd BufWinEnter  *.h,*.c,*.cpp,*.cc if &fdm == 'syntax' | setlocal foldmethod=manual | endif
   augroup END
   augroup vim_fold
     autocmd!
