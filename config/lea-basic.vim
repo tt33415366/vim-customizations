@@ -23,6 +23,12 @@ set foldmethod=syntax
 " Default not fold up
 set foldlevelstart=99
 
+if has("syntax")
+  " The differences between `syntax on` and `syntax enable` are that one will
+  " overrule the your settings while the other would not.
+  syntax on
+endif
+
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   augroup redhat
