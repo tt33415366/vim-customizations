@@ -76,3 +76,16 @@ source $HOME/.vim/config/rainbow.vim
 source $HOME/.vim/config/gtags.vim
 source $HOME/.vim/config/undotree.vim
 ```
+## Misc.
+### Operating on vim's variables
+```vim
+Here's how to show, set, and reset vim's variables:
+
+:set            - shows vars different from defaults
+:set all        - shows all values
+:set foo?       - shows the value of foo
+:set foo+=opt   - add opt to the value w/o changing others
+:set foo-=opt   - remove opt from value
+:set foo&       - reset foo to default value
+:setlocal foo   - only the current buffer
+```

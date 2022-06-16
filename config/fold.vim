@@ -13,17 +13,21 @@ set foldclose=all            " Close folds where the current cursor is in.
 " zi - Invert 'foldenable'.
 " zN - Fold normal: set 'foldenable'.
 "      All folds will be as they were before.
+
+" Enable syntax based folding by default
+set foldmethod=syntax
 if has("autocmd")
   augroup syntax_fold
+    " Clear all autocmds in this group.
     autocmd!
-	autocmd BufNewFile,BufRead *.h,*.c,*.cpp,*.cc setlocal foldmethod=syntax
+	autocmd BufNewFile,BufReadPre *.h,*.c,*.cpp,*.cc setlocal foldmethod=syntax
+	autocmd BufWinEnter  *.h,*.c,*.cpp,*.cc if &fdm == 'syntax' | setlocal foldmethod=manual | endif
   augroup END
   augroup vim_fold
     autocmd!
-    autocmd BufNewFile,BufRead .vimrc,vimrc,*.vim setlocal foldmethod=marker
+    autocmd BufNewFile,BufReadPre .vimrc,vimrc,*.vim setlocal foldmethod=indent
+    autocmd BufWinEnter .vimrc,vimrc,*.vim if &fdm == 'indent' | setlocal foldmethod=manual | endif
   augroup END
-  " Enable syntax based folding
-  set foldmethod=syntax
 endif
 " Default not fold up
 set foldlevelstart=99
