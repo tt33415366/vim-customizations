@@ -68,6 +68,7 @@ Executing command `vim ~/.vimrc`, pasting the followings into the end of the fil
 ```vim
 source $HOME/.vim/config/diff-colorscheme.vim
 source $HOME/.vim/config/lea-basic.vim
+source $HOME/.vim/config/fold.vim
 source $HOME/.vim/config/kmaps.vim
 source $HOME/.vim/config/fzf.vim
 source $HOME/.vim/config/vim-airline.vim

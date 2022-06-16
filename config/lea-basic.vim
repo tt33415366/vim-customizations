@@ -17,11 +17,13 @@ set hidden      " Hide buffers when they are abandoned
 filetype on
 highlight leastyle term=bold cterm=bold ctermfg=red
 match leastyle "\<\(LEA\|Lea\):"
-set viminfo='20,<1000,s1000
-" Enable syntax based folding
-set foldmethod=syntax
-" Default not fold up
-set foldlevelstart=99
+
+if has("viminfo")
+  " Marks will be remembered for the last 20 files you edited.
+  " Contents of registers (up to 1000 lines each) will be remembered
+  " Registers with more than 1000 Kbyte text are skipped.
+  set viminfo='20,<1000,s1000
+endif
 
 if has("syntax")
   " The differences between `syntax on` and `syntax enable` are that one will
