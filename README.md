@@ -75,6 +75,7 @@ source $HOME/.vim/config/vim-airline.vim
 source $HOME/.vim/config/rainbow.vim
 source $HOME/.vim/config/gtags.vim
 source $HOME/.vim/config/undotree.vim
+source $HOME/.vim/config/quickfix.vim
 ```
 ## Misc.
 ### Operating on vim's variables
