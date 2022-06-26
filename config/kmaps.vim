@@ -1,6 +1,6 @@
 " Key mappings and misc plugins
-Plug 'preservim/nerdtree'
-Plug 'preservim/tagbar'
+" Doing a lazy loading with tagbar
+Plug 'preservim/tagbar', { 'on': 'TagbarToggle' }
 Plug 'skywind3000/asyncrun.vim'
 " Chinese vim help docs
 Plug 'yianwillis/vimcdoc'
