@@ -14,9 +14,9 @@
 "   <leader>cz	Find current word in ctags database
 "
 " gtags is also required: apt install global
-" Plugin 'ludovicchabant/vim-gutentags'
-" Plugin 'skywind3000/gutentags_plus'
-" Plugin 'skywind3000/vim-preview'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
+Plug 'skywind3000/vim-preview'
 
 " gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 "
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']

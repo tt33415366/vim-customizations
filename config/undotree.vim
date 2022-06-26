@@ -1,4 +1,4 @@
-" Plugin 'mbbill/undotree'
+Plug 'mbbill/undotree'
 if has("persistent_undo")
    let target_path = expand('~/.undodir')
 

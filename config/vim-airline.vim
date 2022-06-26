@@ -1,6 +1,6 @@
 " vim-airline configuration
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 set t_Co=256
 set laststatus=2
 let g:airline_powerline_fonts = 1

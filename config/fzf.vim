@@ -1,5 +1,5 @@
-" Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " FZF
 let $FZF_DEFAULT_OPTS="--preview='less {}' --bind ctrl-j:preview-page-up,ctrl-k:preview-page-down"
 nnoremap <c-p> :Files<cr>

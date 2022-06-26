@@ -1,9 +1,9 @@
 " Key mappings and misc plugins
-"   Plugin 'preservim/nerdtree'
-"   Plugin 'preservim/tagbar'
-"   Plugin 'skywind3000/asyncrun.vim'
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'skywind3000/asyncrun.vim'
 " Chinese vim help docs
-"   Plugin 'yianwillis/vimcdoc'
+Plug 'yianwillis/vimcdoc'
 nmap <C-n> :NERDTree<cr>
 nmap <C-l> :TagbarToggle<cr>
 " Search the current word in the location window
