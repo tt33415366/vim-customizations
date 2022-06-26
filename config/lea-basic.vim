@@ -13,6 +13,7 @@ set tag=tags;
 set autochdir
 set autowrite   " Automatically save before commands like :next and :make
 set hidden      " Hide buffers when they are abandoned
+set cmdheight=2 " Avoid the annoying `hit-enter` message
 " set mouse=a
 filetype on
 highlight leastyle term=bold cterm=bold ctermfg=red

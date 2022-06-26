@@ -6,5 +6,9 @@
 " Note: Normally, :cwindow jumps to the quickfix window if the command opens it
 " (but not if it's already open). However, as part of the autocmd, this doesn't
 " seem to happen.
+"   :cc      see the current error
+"   :cn      next error
+"   :cp      previous error
+"   :clist   list all errors
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
