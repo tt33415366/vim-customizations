@@ -25,7 +25,7 @@ Changing to your vim's home directory(mostly just `~/.vim`), and executing the f
 ```shell
 $git init
 $git remote add origin <url of this repository>
-$git pull origin main --allow-unrelated-histories
+$git pull origin vim-plug --allow-unrelated-histories
 ```
 ## Enabling the custom configurations
 Executing command `vim ~/.vimrc`, pasting the followings into the plugin management section(the spaces between `call plug#begin()` and `call plug#end()`), save, source it(`:source %`) then run plug install command (`:PlugInstall`), waiting for it to be done and you're good to go. 
