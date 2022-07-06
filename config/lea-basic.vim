@@ -51,5 +51,11 @@ endif
 " Auto generate tags file on file write of *.c and *.h files
 autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
 
+" gVIM specific
+if has("gui_running")
+	colorscheme peachpuff
+	set guifont=Source_Code_Pro:h14:cANSI:qDRAFT
+endif	
+
 " Enable viewing manpage with vim via Man command
 runtime! ftplugin/man.vim
