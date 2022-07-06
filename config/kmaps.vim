@@ -4,7 +4,7 @@ Plug 'preservim/tagbar', { 'on': 'TagbarToggle' }
 Plug 'skywind3000/asyncrun.vim'
 " Chinese vim help docs
 Plug 'yianwillis/vimcdoc'
-nmap <C-n> :NERDTree<cr>
+nmap <C-n> :NERDTreeToggle<cr>
 nmap <C-l> :TagbarToggle<cr>
 " Search the current word in the location window
 nmap <leader>fw :lv /<c-r>=expand("<cword>")<esc>/ %<cr>:lw<cr>
