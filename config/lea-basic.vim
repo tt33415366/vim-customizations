@@ -9,6 +9,11 @@ set shiftwidth=4
 set smarttab
 set showmatch
 set hlsearch
+if has("extra_search")
+  " While typing a search command, show where the pattern, as it was typed
+  " so far, matches. 
+  set incsearch
+endif
 set tag=tags;
 set autochdir
 set autowrite   " Automatically save before commands like :next and :make
