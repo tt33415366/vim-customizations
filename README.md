@@ -43,6 +43,7 @@ source $HOME/.vim/config/undotree.vim
 source $HOME/.vim/config/quickfix.vim
 source $HOME/.vim/config/vim-fugitive.vim
 source $HOME/.vim/config/vim-unimpaired.vim
+source $HOME/.vim/config/vim-visual-star-search.vim
 ```
 ## Misc.
 ### Operating on vim's variables
