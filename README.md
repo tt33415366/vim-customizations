@@ -1,5 +1,5 @@
 # Usage
-## Install vim-plug First
+## Install
 ### Set up vim-plug
 ```shell
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -58,4 +58,12 @@ Here's how to show, set, and reset vim's variables:
 :set foo-=opt   - remove opt from value
 :set foo&       - reset foo to default value
 :setlocal foo   - only the current buffer
+```
+### Integrating fzf into your shell environment
+```shell
+$ ~/.vim/plugged/fzf/install
+Downloading bin/fzf ...
+  - Already exists
+    - Checking fzf executable ... 0.31.0
+	Do you want to enable fuzzy auto-completion? ([y]/n)
 ```
