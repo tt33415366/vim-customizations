@@ -67,3 +67,10 @@ Downloading bin/fzf ...
     - Checking fzf executable ... 0.31.0
 	Do you want to enable fuzzy auto-completion? ([y]/n)
 ```
+### Enabling C/C++/Objective-C autocompletion with Coc
+```shell
+sudo apt install clangd
+```
+```vim
+:CocInstall coc-clangd
+```
