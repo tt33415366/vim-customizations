@@ -60,6 +60,9 @@ autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
 if has("gui_running")
 	colorscheme peachpuff
 	set guifont=Source_Code_Pro:h14:cANSI:qDRAFT
+else
+	colorscheme gruvbox
+	set background=dark
 endif	
 
 " Enable viewing manpage with vim via Man command
