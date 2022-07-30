@@ -68,9 +68,18 @@ Downloading bin/fzf ...
 	Do you want to enable fuzzy auto-completion? ([y]/n)
 ```
 ### Enabling C/C++/Objective-C autocompletion with Coc
+```vim
+:CocInstall coc-clangd
+```
+This required clangd to work with, you could install it with the following command:
 ```shell
 sudo apt install clangd
 ```
+### Enabling Python autocompletion with Coc
 ```vim
-:CocInstall coc-clangd
+:CocInstall coc-python 
+```
+This might required pylint package to work with, you could install it with the following command:
+```shell
+pip3 install pylint
 ```
