@@ -53,6 +53,7 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 let g:gutentags_auto_add_gtags_cscope = 0
 " The following feature will cause gutentags to regenerate the tags files every 
 " time we create a new vim session. Disabled it to use an exists one.
+" N.B. You can always use `:GutentagsUpdate!` to trigger this action on demand.
 let g:gutentags_generate_on_new=0
 
 " Enable gutentags debug tracing
