@@ -65,6 +65,10 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" disable coc in git commits, enable spell checking instead.
+autocmd BufRead,BufNewFile COMMIT_EDITMSG let b:coc_enabled=0
+autocmd BufRead,BufNewFile COMMIT_EDITMSG set spell
+
 highlight Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
 highlight PmenuSel ctermfg=NONE ctermbg=26 cterm=NONE guifg=NONE guibg=#204a87 gui=NONE
 highlight search term=reverse ctermfg=NONE ctermbg=11 guibg=Yellow
