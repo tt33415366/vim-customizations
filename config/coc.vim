@@ -67,7 +67,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " disable coc in git commits, enable spell checking instead.
 autocmd BufRead,BufNewFile COMMIT_EDITMSG let b:coc_enabled=0
-autocmd BufRead,BufNewFile COMMIT_EDITMSG set spell
+autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
 
 highlight Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
 highlight PmenuSel ctermfg=NONE ctermbg=26 cterm=NONE guifg=NONE guibg=#204a87 gui=NONE
