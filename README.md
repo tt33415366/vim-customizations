@@ -77,9 +77,9 @@ sudo apt install clangd
 ```
 ### Enabling Python autocompletion with Coc
 ```vim
-:CocInstall coc-python 
+:CocInstall coc-pyright 
 ```
-This might required pylint package to work with, you could install it with the following command:
+This might required pyright package to work with, you could install it with the following command:
 ```shell
-pip3 install pylint
+pip3 install pyright
 ```
