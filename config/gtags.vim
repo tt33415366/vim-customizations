@@ -22,7 +22,9 @@ Plug 'skywind3000/vim-preview'
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
 
 " 所生成的数据文件的名称 "
-let g:gutentags_ctags_tagfile = '.tags'
+" Gutentags will generate a tags file in this format
+" '<project path>-<gutentags_ctags_tagfile>'
+let g:gutentags_ctags_tagfile = 'tags'
 
 " 同时开启 ctags 和 gtags 支持
 let g:gutentags_modules = []
@@ -42,13 +44,17 @@ if !isdirectory(s:vim_tags)
 endif
 
 " 配置 ctags 的参数 "
-let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extras=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " 禁用 gutentags 自动加载 gtags 数据库的行为，
 " 避免多个项目的数据库相互影响
 let g:gutentags_auto_add_gtags_cscope = 0
+" The following feature will cause gutentags to regenerate the tags files every 
+" time we create a new vim session. Disabled it to use an exists one.
+" N.B. You can always use `:GutentagsUpdate!` to trigger this action on demand.
+let g:gutentags_generate_on_new=0
 
 " Enable gutentags debug tracing
 " View with `:messages`
@@ -56,3 +62,9 @@ let g:gutentags_auto_add_gtags_cscope = 0
 
 " change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
+
+" vim-preview configurations
+" With these two lines, we can use command `p/P` to open/close preview windows on
+" the right side for quickfix files.
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>

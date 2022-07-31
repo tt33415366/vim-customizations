@@ -1,5 +1,5 @@
 # Usage
-## Install vim-plug First
+## Install
 ### Set up vim-plug
 ```shell
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -44,6 +44,7 @@ source $HOME/.vim/config/quickfix.vim
 source $HOME/.vim/config/vim-fugitive.vim
 source $HOME/.vim/config/vim-unimpaired.vim
 source $HOME/.vim/config/vim-visual-star-search.vim
+source $HOME/.vim/config/coc.vim
 ```
 ## Misc.
 ### Operating on vim's variables
@@ -57,4 +58,28 @@ Here's how to show, set, and reset vim's variables:
 :set foo-=opt   - remove opt from value
 :set foo&       - reset foo to default value
 :setlocal foo   - only the current buffer
+```
+### Integrating fzf into your shell environment
+```shell
+$ ~/.vim/plugged/fzf/install
+Downloading bin/fzf ...
+  - Already exists
+    - Checking fzf executable ... 0.31.0
+	Do you want to enable fuzzy auto-completion? ([y]/n)
+```
+### Enabling C/C++/Objective-C autocompletion with Coc
+```vim
+:CocInstall coc-clangd
+```
+This required clangd to work with, you could install it with the following command:
+```shell
+sudo apt install clangd
+```
+### Enabling Python autocompletion with Coc
+```vim
+:CocInstall coc-python 
+```
+This might required pylint package to work with, you could install it with the following command:
+```shell
+pip3 install pylint
 ```
