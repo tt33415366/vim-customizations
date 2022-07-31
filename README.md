@@ -83,3 +83,9 @@ This might required pyright package to work with, you could install it with the 
 ```shell
 pip3 install pyright
 ```
+### Enabling Golang support
+```vim
+Plug $HOME/.vim/config/golang.vim
+```
+N.B. You might also wanna install gotags, if you want the tags switch function as provided by ctags 
+for C/C++.
