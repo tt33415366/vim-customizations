@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: mirror
         id: mirror
-        uses: tt33415366/github-mirror-action@v2
+        uses: tt33415366/github-mirror-action
         with:
           origin: 'https://gitlab.com/tt33415366/vim-customizations.git'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
