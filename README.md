@@ -67,6 +67,20 @@ Downloading bin/fzf ...
     - Checking fzf executable ... 0.31.0
 	Do you want to enable fuzzy auto-completion? ([y]/n)
 ```
+### Coc.nvim requirements
+Coc.nvim plugin required specific(mostly the newest one) nodejs to be installed, and 
+can install it via the following commands:
+```shell
+sudo apt install nodejs
+```
+In case you need to upgrade nodejs to a specicif version, you can have it done with
+the following commands:
+```shell
+sudo apt install npm
+sudo npm install -g n
+sudo n stable
+```
+N.B. stable can be changed to latest, if you want the newest one of nodejs.
 ### Enabling C/C++/Objective-C autocompletion with Coc
 ```vim
 :CocInstall coc-clangd
@@ -77,9 +91,15 @@ sudo apt install clangd
 ```
 ### Enabling Python autocompletion with Coc
 ```vim
-:CocInstall coc-python 
+:CocInstall coc-pyright 
 ```
-This might required pylint package to work with, you could install it with the following command:
+This might required pyright package to work with, you could install it with the following command:
 ```shell
-pip3 install pylint
+pip3 install pyright
 ```
+### Enabling Golang support
+```vim
+Plug $HOME/.vim/config/golang.vim
+```
+N.B. You might also wanna install gotags, if you want the tags switch function as provided by ctags 
+for C/C++.

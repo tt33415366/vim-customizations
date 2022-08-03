@@ -11,3 +11,6 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
+" Open/Close the Undotree and switch to it if possible. Noticed that you could
+" always use `J`/`K` in Undotree window to do a faster undo/redo history preview.
+nmap <leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
