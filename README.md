@@ -85,7 +85,7 @@ N.B. stable can be changed to latest, if you want the newest one of nodejs.
 It requires vim >= 8.1.1719 or neovim >= 0.4.0 and nodejs >= 12.12, though it's highly recommanded  
 to upgrade to the newest version, but for those who just simply can't, here's a rescue:
 ```shell
-checkout Coc.nvim-v0.0.81
+git checkout Coc.nvim-v0.0.81
 ```
 ### Enabling C/C++/Objective-C autocompletion with Coc
 ```vim
