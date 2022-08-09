@@ -59,6 +59,10 @@ Here's how to show, set, and reset vim's variables:
 :set foo&       - reset foo to default value
 :setlocal foo   - only the current buffer
 ```
+### Figuring out what the key maps to in vim
+```vim
+:verbose i/n/vmap <hot-key>
+```
 ### Integrating fzf into your shell environment
 ```shell
 $ ~/.vim/plugged/fzf/install
