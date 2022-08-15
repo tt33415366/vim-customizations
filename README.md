@@ -99,6 +99,20 @@ This required clangd to work with, you could install it with the following comma
 ```shell
 sudo apt install clangd
 ```
+#### Project setup
+Although clangd can work out of box for most simple projects, it is recommanded to generate a `compile_commands.json` for a new project, and this file can be easily generated within a few steps:
+- CMake based project
+```shell
+cd build
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+cd ..
+ln -s build/compile_commands.json compile_commands.json
+```
+- Make based project
+```shell
+sudo apt install bear
+bear make
+```
 ### Enabling Python autocompletion with Coc
 ```vim
 :CocInstall coc-pyright 
