@@ -63,7 +63,15 @@ if has("gui_running")
 else
 	colorscheme gruvbox
 	set background=dark
-endif	
+endif
+
+" Warn about extra white space
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+au BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinLeave * call clearmatches()
 
 " Enable viewing manpage with vim via Man command
 runtime! ftplugin/man.vim
