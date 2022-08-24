@@ -154,5 +154,5 @@ autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
 
 highlight Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
 highlight PmenuSel ctermfg=NONE ctermbg=26 cterm=NONE guifg=NONE guibg=#204a87 gui=NONE
-highlight search term=reverse ctermfg=NONE ctermbg=11 guibg=Yellow
+highlight search term=reverse ctermfg=190 ctermbg=90 guibg=Yellow
 highlight CocHighlightText ctermfg=NONE ctermbg=208
