@@ -20,6 +20,10 @@ set autowrite   " Automatically save before commands like :next and :make
 set hidden      " Hide buffers when they are abandoned
 set cmdheight=2 " Avoid the annoying `hit-enter` message
 " set mouse=a
+" When working with Coc.nvim enabled, the backspace might be set to other 
+" values occationally, which might be very inconvenient, fixed setting it 
+" here.
+set backspace=indent,eol,start
 filetype on
 highlight leastyle term=bold cterm=bold ctermfg=red
 match leastyle "\<\(LEA\|Lea\):"
