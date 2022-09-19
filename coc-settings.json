@@ -1,0 +1,4 @@
+{
+	"suggest.noselect": true,
+	"clangd.arguments": [ "--background-index", "--clang-tidy", "--header-insertion=iwyu" ]
+}
