@@ -118,7 +118,7 @@ N.B. Linux kernel has a `gen_compile_commands.py` script to do this by simply pa
 It is also highly recommanded to generate a project specific file named `.clangd` to instruct clangd to do some extra linting things.
 A typical `.clangd` would looks like:
 
-```json
+```yaml
 CompileFlags:       # Tweak the parse settings
 	Add: []         # List of flags to append to the compile command.
 	Remove: []      # List of flags to remove from the compile command.
