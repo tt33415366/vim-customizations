@@ -100,7 +100,7 @@ This required clangd to work with, you could install it with the following comma
 sudo apt install clangd
 ```
 #### Project setup
-Although clangd can work out of box for most simple projects, it is recommanded to generate a `compile_commands.json` for a new project, and this file can be easily generated within a few steps:
+Although clangd can work out of box for most of simple projects, it is recommanded to generate a `compile_commands.json` for a new project, and this file can be easily generated within a few steps:
 - CMake based project
 ```shell
 cd build
@@ -113,7 +113,25 @@ ln -s build/compile_commands.json compile_commands.json
 sudo apt install bear
 bear make
 ```
+N.B. Linux kernel has a `gen_compile_commands.py` script to do this by simply parsing the `.<target>.o.cmd` files.
+##### .clangd
+It is also highly recommanded to generate a project specific file named `.clangd` to instruct clangd to do some extra linting things.
+A typical `.clangd` would looks like:
+
+```json
+CompileFlags:       # Tweak the parse settings
+	Add: []         # List of flags to append to the compile command.
+	Remove: []      # List of flags to remove from the compile command.
+ClangTidy:          # Configure how clang-tidy runs over your files.
+	Add: [bugprone-*, modernize*, performance-*]         # List of checks. These can be globs, for example Add: 'bugprone-*'.
+	Remove: [modernize-use-trailing-return-type]         # List of checks to disable, can be globs.
+```
+- The detailed `.clangd` configurations can be found [here](https://clangd.llvm.org/config).
+
+- The detailed clang-tidy checks can be found [here](https://clangd.llvm.org/config.html#clangtidy). 
+
 ### Enabling Python autocompletion with Coc
+
 ```vim
 :CocInstall coc-pyright 
 ```
