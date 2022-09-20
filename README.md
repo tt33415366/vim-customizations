@@ -71,27 +71,42 @@ Downloading bin/fzf ...
     - Checking fzf executable ... 0.31.0
 	Do you want to enable fuzzy auto-completion? ([y]/n)
 ```
-### Coc.nvim requirements
+### Coc.nvim
+
+#### Requirements
+
 Coc.nvim plugin required specific(mostly the newest one) nodejs to be installed, and 
 can install it via the following commands:
+
 ```shell
 sudo apt install nodejs
 ```
 In case you need to upgrade nodejs to a specicif version, you can have it done with
 the following commands:
+
 ```shell
 sudo apt install npm
 sudo npm install -g n
 sudo n stable
 ```
 N.B. stable can be changed to latest, if you want the newest one of nodejs.
+
 #### Coc.nvim v0.0.82 is a breakthrough upgrade
+
 It requires vim >= 8.1.1719 or neovim >= 0.4.0 and nodejs >= 12.12, though it's highly recommanded  
 to upgrade to the newest version, but for those who just simply can't, here's a rescue:
+
 ```shell
 git checkout Coc.nvim-v0.0.81
 ```
+#### View direct output from specific  LSP(Language Service Provider) or plugin
+
+```shell
+:CocCommand workspace.showOutput
+```
+
 ### Enabling C/C++/Objective-C autocompletion with Coc
+
 ```vim
 :CocInstall coc-clangd
 ```
