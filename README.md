@@ -138,6 +138,12 @@ A typical `.clangd` would looks like:
 CompileFlags:       # Tweak the parse settings
 	Add: []         # List of flags to append to the compile command.
 	Remove: []      # List of flags to remove from the compile command.
+
+If:
+	PathExclude: [ .*\.c, .*\.h ] # Do not apply to .c/.h files
+CompileFlags:
+	Add: [ -std=c++11 ]
+
 ClangTidy:          # Configure how clang-tidy runs over your files.
 	Add: [bugprone-*, modernize*, performance-*]         # List of checks. These can be globs, for example Add: 'bugprone-*'.
 	Remove: [modernize-use-trailing-return-type]         # List of checks to disable, can be globs.
@@ -145,6 +151,8 @@ ClangTidy:          # Configure how clang-tidy runs over your files.
 - The detailed `.clangd` configurations can be found [here](https://clangd.llvm.org/config).
 
 - The detailed clang-tidy checks can be found [here](https://clangd.llvm.org/config.html#clangtidy). 
+
+- N.B. The indents in the yaml file **MUST** be `<TAB>`.
 
 ### Enabling Python autocompletion with Coc
 
