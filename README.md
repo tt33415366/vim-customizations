@@ -45,6 +45,7 @@ source $HOME/.vim/config/vim-fugitive.vim
 source $HOME/.vim/config/vim-unimpaired.vim
 source $HOME/.vim/config/vim-visual-star-search.vim
 source $HOME/.vim/config/coc.vim
+source $HOME/.vim/config/indent.vim
 ```
 ## Misc.
 ### Operating on vim's variables
