@@ -10,6 +10,8 @@ nmap <C-l> :TagbarToggle<cr>
 nmap <leader>fw :lv /<c-r>=expand("<cword>")<esc>/ %<cr>:lw<cr>
 " Search the current search pattern in the location window
 nmap <leader>fs :lv // %<cr>:lw<cr>
+" Represent current buffer with `cp936` encoding, mostly for the representation of embbeded Chinese comments
+nnoremap <leader>rr :e ++enc=cp936<cr>
 " Remove all trailing whitespaces
 nnoremap <silent> <leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 " Disable the annoying 'Press ENTER to continue' message
