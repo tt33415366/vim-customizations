@@ -60,6 +60,9 @@ endif
 " Auto generate tags file on file write of *.c and *.h files
 autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
 
+" For those who would like to write chinese comments within source code.
+autocmd BufReadPre *.cpp,*.c,*.h setlocal fileencodings=ucs-bom,utf-8,chinese
+
 " gVIM specific
 if has("gui_running")
 	colorscheme peachpuff
