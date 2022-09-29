@@ -15,3 +15,6 @@ nnoremap <silent> <leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar
 " Disable the annoying 'Press ENTER to continue' message
 nnoremap K K<CR>
 vnoremap K K<CR>
+" Sort tags by their order in the source file. Press 's' to sort them
+" alphabetically.
+let g:tagbar_sort=0
