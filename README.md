@@ -144,9 +144,13 @@ If:
 CompileFlags:
 	Add: [ -std=c++11 ]
 
-ClangTidy:          # Configure how clang-tidy runs over your files.
-	Add: [bugprone-*, modernize*, performance-*]         # List of checks. These can be globs, for example Add: 'bugprone-*'.
-	Remove: [modernize-use-trailing-return-type]         # List of checks to disable, can be globs.
+Diagnostics:
+	ClangTidy:          # Configure how clang-tidy runs over your files.
+		Add: [bugprone-*, modernize*, performance-*]         # List of checks. These can be globs, for example Add: 'bugprone-*'.
+		Remove: [modernize-use-trailing-return-type]         # List of checks to disable, can be globs.
+		CheckOptions:
+			readability-function-cognitive-complexity: IgnoreMacros # Options for specific check
+
 ```
 - The detailed `.clangd` configurations can be found [here](https://clangd.llvm.org/config).
 
