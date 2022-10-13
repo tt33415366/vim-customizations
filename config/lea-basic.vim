@@ -3,6 +3,10 @@ set number
 set cin
 set autoindent
 set smartindent
+" Place C++ scope declarations N characters from the indent of the block they
+" are in. (default 'shiftwidth').
+" Check `:help cinoptions-values` for detailed explainations
+set cinoptions=g0
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
