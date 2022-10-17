@@ -6,6 +6,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 " Smarter tab line
 let g:airline#extensions#tabline#enabled = 1
+" This searchcount extensions really slows down vim a lot while handling large files.
+let g:airline#extensions#searchcount#enabled = 0
 " Themes
 let g:airline_theme='sol'
 " Cutomize the theme
