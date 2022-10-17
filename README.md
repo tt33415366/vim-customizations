@@ -64,6 +64,20 @@ Here's how to show, set, and reset vim's variables:
 ```vim
 :verbose i/n/vmap <hot-key>
 ```
+### Profiling plugin/function loaded with VIM
+#### Using the builtin `profile` function directly
+```vim
+:profile start profile.log
+:profile func *
+:profile file *
+" At this point do slow actions
+:profile pause
+:noautocmd qall!
+```
+#### Using the builtin `--startuptime` option
+```shell
+--startuptime <file> Write startup timing messages to <file>
+```
 ### Integrating fzf into your shell environment
 ```shell
 $ ~/.vim/plugged/fzf/install
