@@ -29,8 +29,6 @@ set cmdheight=2 " Avoid the annoying `hit-enter` message
 " here.
 set backspace=indent,eol,start
 filetype on
-highlight leastyle term=bold cterm=bold ctermfg=red
-match leastyle "\<\(LEA\|Lea\):"
 
 if has("viminfo")
   " Marks will be remembered for the last 20 files you edited.
@@ -76,12 +74,21 @@ else
 	set background=dark
 endif
 
+" Custom signature highlight
+highlight leastyle term=bold cterm=bold ctermfg=red
+autocmd ColorScheme * highlight leastyle term=bold cterm=bold ctermfg=red
+match leastyle "\<\(LEA\|Lea\):"
+au BufWinEnter * call matchadd("leastyle", '\<\(LEA\|Lea\):')
+au InsertEnter * call matchadd("leastyle", '\<\(LEA\|Lea\):')
+au InsertLeave * call matchadd("leastyle", '\<\(LEA\|Lea\):')
+
 " Warn about extra white space
 highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-au BufWinEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinEnter * call matchadd("ExtraWhitespace", '\s\+$')
+au InsertEnter * call matchadd("ExtraWhitespace", '\s\+\%#\@<!$')
+au InsertLeave * call matchadd("ExtraWhitespace", '\s\+$')
 au BufWinLeave * call clearmatches()
 
 " Enable viewing manpage with vim via Man command
