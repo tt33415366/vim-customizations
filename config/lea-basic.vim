@@ -61,6 +61,12 @@ if has("autocmd")
     autocmd BufReadPre *.cpp,*.c,*.h setlocal fileencodings=ucs-bom,utf-8,chinese
   augroup END
 
+  augroup NoLineCommentCnt
+    autocmd!
+    " Don't automatically continue comment in new line for line-based comment
+    autocmd BufEnter *.cpp,*.c,*.h setlocal comments-=:// comments+=fO://
+  augroup END
+
   augroup AutoCtagsAfterWrite
     autocmd!
     " Auto generate tags file on file write of *.c and *.h files
