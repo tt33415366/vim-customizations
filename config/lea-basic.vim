@@ -15,7 +15,7 @@ set showmatch
 set hlsearch
 if has("extra_search")
   " While typing a search command, show where the pattern, as it was typed
-  " so far, matches. 
+  " so far, matches.
   set incsearch
 endif
 set tag=tags;
@@ -24,8 +24,8 @@ set autowrite   " Automatically save before commands like :next and :make
 set hidden      " Hide buffers when they are abandoned
 set cmdheight=2 " Avoid the annoying `hit-enter` message
 " set mouse=a
-" When working with Coc.nvim enabled, the backspace might be set to other 
-" values occationally, which might be very inconvenient, fixed setting it 
+" When working with Coc.nvim enabled, the backspace might be set to other
+" values occationally, which might be very inconvenient, fixed setting it
 " here.
 set backspace=indent,eol,start
 filetype on
@@ -54,16 +54,48 @@ if has("autocmd")
     \   exe "normal! g'\"" |
     \ endif
   augroup END
+
+  augroup CnComment
+    autocmd!
+    " For those who would like to write chinese comments within source code.
+    autocmd BufReadPre *.cpp,*.c,*.h setlocal fileencodings=ucs-bom,utf-8,chinese
+  augroup END
+
+  augroup AutoCtagsAfterWrite
+    autocmd!
+    " Auto generate tags file on file write of *.c and *.h files
+    autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
+  augroup END
+
+  augroup CusSignatureHighlight
+    autocmd!
+    " Custom signature highlight
+    highlight leastyle term=bold cterm=bold ctermfg=red
+    autocmd ColorScheme * highlight leastyle term=bold cterm=bold ctermfg=red
+    match leastyle "\<\(LEA\|Lea\):"
+    au BufWinEnter * call matchadd("leastyle", '\<\(LEA\|Lea\):')
+    au InsertEnter * call matchadd("leastyle", '\<\(LEA\|Lea\):')
+    au InsertLeave * call matchadd("leastyle", '\<\(LEA\|Lea\):')
+  augroup END
+
+  augroup WarnExtraWhitespace
+    autocmd!
+    " Warn about extra white space
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+    au BufWinEnter * call matchadd("ExtraWhitespace", '\s\+$')
+    au InsertEnter * call matchadd("ExtraWhitespace", '\s\+\%#\@<!$')
+    au InsertLeave * call matchadd("ExtraWhitespace", '\s\+$')
+    au BufWinLeave * call clearmatches()
+  augroup END
+
   " Enabling VIM to load plugins and indention rules based on the detected
   " filetype.
   filetype plugin indent on
 endif
 
-" Auto generate tags file on file write of *.c and *.h files
-autocmd BufWritePost *.cpp,*.c,*.h silent! !ctags . &
 
-" For those who would like to write chinese comments within source code.
-autocmd BufReadPre *.cpp,*.c,*.h setlocal fileencodings=ucs-bom,utf-8,chinese
 
 " gVIM specific
 if has("gui_running")
@@ -73,23 +105,6 @@ else
 	colorscheme gruvbox
 	set background=dark
 endif
-
-" Custom signature highlight
-highlight leastyle term=bold cterm=bold ctermfg=red
-autocmd ColorScheme * highlight leastyle term=bold cterm=bold ctermfg=red
-match leastyle "\<\(LEA\|Lea\):"
-au BufWinEnter * call matchadd("leastyle", '\<\(LEA\|Lea\):')
-au InsertEnter * call matchadd("leastyle", '\<\(LEA\|Lea\):')
-au InsertLeave * call matchadd("leastyle", '\<\(LEA\|Lea\):')
-
-" Warn about extra white space
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-au BufWinEnter * call matchadd("ExtraWhitespace", '\s\+$')
-au InsertEnter * call matchadd("ExtraWhitespace", '\s\+\%#\@<!$')
-au InsertLeave * call matchadd("ExtraWhitespace", '\s\+$')
-au BufWinLeave * call clearmatches()
 
 " Enable viewing manpage with vim via Man command
 runtime! ftplugin/man.vim
