@@ -58,7 +58,7 @@ if has("autocmd")
   augroup CnComment
     autocmd!
     " For those who would like to write chinese comments within source code.
-    autocmd BufReadPre *.cpp,*.c,*.h setlocal fileencodings=ucs-bom,utf-8,chinese
+    autocmd BufReadPre *.cpp,*.c,*.h setlocal fileencodings=ucs-bom,utf-8,chinese,cp936
   augroup END
 
   augroup NoLineCommentCnt
