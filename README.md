@@ -45,6 +45,7 @@ source $HOME/.vim/config/vim-fugitive.vim
 source $HOME/.vim/config/vim-unimpaired.vim
 source $HOME/.vim/config/vim-visual-star-search.vim
 source $HOME/.vim/config/coc.vim
+source $HOME/.vim/config/indent.vim
 ```
 ## Misc.
 ### Operating on vim's variables
@@ -63,6 +64,20 @@ Here's how to show, set, and reset vim's variables:
 ```vim
 :verbose i/n/vmap <hot-key>
 ```
+### Profiling plugin/function loaded with VIM
+#### Using the builtin `profile` function directly
+```vim
+:profile start profile.log
+:profile func *
+:profile file *
+" At this point do slow actions
+:profile pause
+:noautocmd qall!
+```
+#### Using the builtin `--startuptime` option
+```shell
+--startuptime <file> Write startup timing messages to <file>
+```
 ### Integrating fzf into your shell environment
 ```shell
 $ ~/.vim/plugged/fzf/install
@@ -71,27 +86,42 @@ Downloading bin/fzf ...
     - Checking fzf executable ... 0.31.0
 	Do you want to enable fuzzy auto-completion? ([y]/n)
 ```
-### Coc.nvim requirements
+### Coc.nvim
+
+#### Requirements
+
 Coc.nvim plugin required specific(mostly the newest one) nodejs to be installed, and 
 can install it via the following commands:
+
 ```shell
 sudo apt install nodejs
 ```
 In case you need to upgrade nodejs to a specicif version, you can have it done with
 the following commands:
+
 ```shell
 sudo apt install npm
 sudo npm install -g n
 sudo n stable
 ```
 N.B. stable can be changed to latest, if you want the newest one of nodejs.
+
 #### Coc.nvim v0.0.82 is a breakthrough upgrade
+
 It requires vim >= 8.1.1719 or neovim >= 0.4.0 and nodejs >= 12.12, though it's highly recommanded  
 to upgrade to the newest version, but for those who just simply can't, here's a rescue:
+
 ```shell
 git checkout Coc.nvim-v0.0.81
 ```
+#### View direct output from specific  LSP(Language Service Provider) or plugin
+
+```shell
+:CocCommand workspace.showOutput
+```
+
 ### Enabling C/C++/Objective-C autocompletion with Coc
+
 ```vim
 :CocInstall coc-clangd
 ```
@@ -122,13 +152,25 @@ A typical `.clangd` would looks like:
 CompileFlags:       # Tweak the parse settings
 	Add: []         # List of flags to append to the compile command.
 	Remove: []      # List of flags to remove from the compile command.
-ClangTidy:          # Configure how clang-tidy runs over your files.
-	Add: [bugprone-*, modernize*, performance-*]         # List of checks. These can be globs, for example Add: 'bugprone-*'.
-	Remove: [modernize-use-trailing-return-type]         # List of checks to disable, can be globs.
+
+If:
+	PathExclude: [ .*\.c, .*\.h ] # Do not apply to .c/.h files
+CompileFlags:
+	Add: [ -std=c++11 ]
+
+Diagnostics:
+	ClangTidy:          # Configure how clang-tidy runs over your files.
+		Add: [bugprone-*, modernize*, performance-*]         # List of checks. These can be globs, for example Add: 'bugprone-*'.
+		Remove: [modernize-use-trailing-return-type]         # List of checks to disable, can be globs.
+		CheckOptions:
+			readability-function-cognitive-complexity: IgnoreMacros # Options for specific check
+
 ```
 - The detailed `.clangd` configurations can be found [here](https://clangd.llvm.org/config).
 
 - The detailed clang-tidy checks can be found [here](https://clangd.llvm.org/config.html#clangtidy). 
+
+- N.B. The indents in the yaml file **MUST** be `<TAB>`.
 
 ### Enabling Python autocompletion with Coc
 

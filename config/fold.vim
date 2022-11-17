@@ -14,8 +14,9 @@ set foldclose=all            " Close folds where the current cursor is in.
 " zN - Fold normal: set 'foldenable'.
 "      All folds will be as they were before.
 
-" Enable syntax based folding by default
-set foldmethod=syntax
+" Do not enable syntax based folding by default, it's a really time-consuming
+" process.
+" set foldmethod=syntax
 if has("autocmd")
   augroup syntax_fold
     " Clear all autocmds in this group.

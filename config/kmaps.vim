@@ -1,6 +1,6 @@
 " Key mappings and misc plugins
 " Doing a lazy loading with tagbar
-Plug 'preservim/tagbar', { 'on': 'TagbarToggle' }
+Plug 'preservim/tagbar', { 'for': [ 'c', 'cpp' ] }
 Plug 'skywind3000/asyncrun.vim'
 " Chinese vim help docs
 Plug 'yianwillis/vimcdoc'
@@ -15,3 +15,8 @@ nnoremap <silent> <leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar
 " Disable the annoying 'Press ENTER to continue' message
 nnoremap K K<CR>
 vnoremap K K<CR>
+" Sort tags by their order in the source file. Press 's' to sort them
+" alphabetically.
+let g:tagbar_sort = 0
+" Automatically moved to tagbar window while it is opened.
+let g:tagbar_autofocus = 1
