@@ -106,6 +106,14 @@ sudo n stable
 ```
 N.B. stable can be changed to latest, if you want the newest one of nodejs.
 
+##### Possible Errors
+
+- `build/index.js` not found
+   ```shell
+   [coc.nvim] build/index.js not found, please install dependencies and compile coc.nvim by: yarn install
+   ```
+   Switch to the Coc.nvim(mostly `~/.vim/plugged/coc.nvim/`) directory, checkout the release branch.
+
 #### Coc.nvim v0.0.82 is a breakthrough upgrade
 
 It requires vim >= 8.1.1719 or neovim >= 0.4.0 and nodejs >= 12.12, though it's highly recommanded  
