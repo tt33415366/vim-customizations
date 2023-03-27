@@ -161,10 +161,12 @@ CompileFlags:       # Tweak the parse settings
 	Add: []         # List of flags to append to the compile command.
 	Remove: []      # List of flags to remove from the compile command.
 
+---
 If:
 	PathExclude: [ .*\.c, .*\.h ] # Do not apply to .c/.h files
 CompileFlags:
 	Add: [ -std=c++11 ]
+---
 
 Diagnostics:
 	ClangTidy:          # Configure how clang-tidy runs over your files.
@@ -174,6 +176,10 @@ Diagnostics:
 			readability-function-cognitive-complexity: IgnoreMacros # Options for specific check
 
 ```
+- `–--` delimits fragments
+
+  Each file can contain multiple fragments separated by `---` lines. (This is only useful if the fragments have different `If` conditions).
+
 - The detailed `.clangd` configurations can be found [here](https://clangd.llvm.org/config).
 
 - The detailed clang-tidy checks can be found [here](https://clangd.llvm.org/config.html#clangtidy). 
