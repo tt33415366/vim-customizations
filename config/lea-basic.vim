@@ -7,6 +7,9 @@ set smartindent
 " are in. (default 'shiftwidth').
 " Check `:help cinoptions-values` for detailed explainations
 set cinoptions=g0
+" Place case labels 0 characters from the indent of the switch().
+" This conforms to the Linux coding style.
+set cinoptions+=:0
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
