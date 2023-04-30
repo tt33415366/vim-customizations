@@ -186,6 +186,31 @@ Diagnostics:
 
 - N.B. The indents in the yaml file **MUST** be `<TAB>`.
 
+##### .clang-format
+
+[Clang-Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#) describes configurable formatting style options supported by [LibFormat](https://clang.llvm.org/docs/LibFormat.html) and [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html).
+
+- [LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html)
+
+  This is the default clang format.
+
+- [Linux kernel coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)
+
+  ```cpp
+  BasedOnStyle: LLVM
+  IndentWidth: 8
+  UseTab: Always
+  BreakBeforeBraces: Linux
+  AllowShortIfStatementsOnASingleLine: false
+  IndentCaseLabels: false
+  ```
+
+- [Google's C++ Coding Style](https://google.github.io/styleguide/cppguide.html)
+
+  ```yaml
+  BasedOnStyle: google
+  ```
+
 ### Enabling Python autocompletion with Coc
 
 ```vim
