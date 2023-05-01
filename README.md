@@ -196,7 +196,7 @@ Diagnostics:
 
 - [Linux kernel coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)
 
-  ```cpp
+  ```yaml
   BasedOnStyle: LLVM
   IndentWidth: 8
   UseTab: Always
