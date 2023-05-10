@@ -46,6 +46,7 @@ source $HOME/.vim/config/vim-unimpaired.vim
 source $HOME/.vim/config/vim-visual-star-search.vim
 source $HOME/.vim/config/coc.vim
 source $HOME/.vim/config/indent.vim
+source $HOME/.vim/config/tabular.vim
 ```
 ## Misc.
 ### Operating on vim's variables
@@ -226,3 +227,22 @@ Plug $HOME/.vim/config/golang.vim
 ```
 N.B. You might also wanna install gotags, if you want the tags switch function as provided by ctags 
 for C/C++.
+
+### Tabular
+
+Tabular is a simple plugin to enable easy text line up.
+
+```vim
+" Before
+one = 1
+two = 2
+three = 3
+four = 4
+
+" After running `:Tab /=`
+one   = 1
+two   = 2
+three = 3
+four  = 4
+```
+
