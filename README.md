@@ -35,6 +35,7 @@ source $HOME/.vim/config/lea-basic.vim
 source $HOME/.vim/config/fold.vim
 source $HOME/.vim/config/kmaps.vim
 source $HOME/.vim/config/nerdtree.vim
+source $HOME/.vim/config/tagbar.vim
 source $HOME/.vim/config/fzf.vim
 source $HOME/.vim/config/vim-airline.vim
 source $HOME/.vim/config/rainbow.vim
