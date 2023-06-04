@@ -29,7 +29,7 @@ if has("autocmd")
         \ | endif
   " Align assignments
   autocmd VimEnter * if exists(":Tabularize")
-        \ | exec "nnoremap <leader>a= :Tabularize :Tabularize /=\<CR>"
-        \ | exec "vnoremap <leader>a= :Tabularize :Tabularize /=\<CR>"
+        \ | exec "nnoremap <leader>a= :Tabularize /=\<CR>"
+        \ | exec "vnoremap <leader>a= :Tabularize /=\<CR>"
         \ | endif
 endif
