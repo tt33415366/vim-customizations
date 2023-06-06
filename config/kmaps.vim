@@ -24,12 +24,12 @@ if has("autocmd")
         \ | endif
   " Align structure
   autocmd VimEnter * if exists(":Tabularize")
-        \ | exec "nnoremap <leader>as :Tabularize /\\S\\+;\<CR>"
-        \ | exec "vnoremap <leader>as :Tabularize /\\S\\+;\<CR>"
+        \ | exec "nnoremap <leader>ts :Tabularize /\\S\\+;\<CR>"
+        \ | exec "vnoremap <leader>ts :Tabularize /\\S\\+;\<CR>"
         \ | endif
   " Align assignments
   autocmd VimEnter * if exists(":Tabularize")
-        \ | exec "nnoremap <leader>a= :Tabularize /=\<CR>"
-        \ | exec "vnoremap <leader>a= :Tabularize /=\<CR>"
+        \ | exec "nnoremap <leader>te :Tabularize /=\<CR>"
+        \ | exec "vnoremap <leader>te :Tabularize /=\<CR>"
         \ | endif
 endif
