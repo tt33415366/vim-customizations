@@ -10,9 +10,10 @@ set cinoptions=g0
 " Place case labels 0 characters from the indent of the switch().
 " This conforms to the Linux coding style.
 set cinoptions+=:0
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" Prefer a `.clang-format` over these fixed tab values
+" set tabstop=4
+" set softtabstop=4
+" set shiftwidth=4
 set smarttab
 set showmatch
 set hlsearch
