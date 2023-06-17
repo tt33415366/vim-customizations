@@ -148,10 +148,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" disable coc in git commits, enable spell checking instead.
-autocmd BufRead,BufNewFile COMMIT_EDITMSG let b:coc_enabled=0
-autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
-
 highlight Pmenu ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#64666d gui=NONE
 highlight PmenuSel ctermfg=NONE ctermbg=26 cterm=NONE guifg=NONE guibg=#204a87 gui=NONE
 highlight search term=reverse ctermfg=190 ctermbg=90 guibg=Yellow
