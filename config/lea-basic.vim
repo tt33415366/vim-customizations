@@ -100,6 +100,15 @@ if has("autocmd")
     au BufWinLeave * call clearmatches()
   augroup END
 
+  augroup CommitMsgConf
+    " disable coc in git commits, enable spell checking instead.
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG let b:coc_enabled=0
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG set tabstop=4
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG set softtabstop=4
+    autocmd BufRead,BufNewFile COMMIT_EDITMSG set shiftwidth=4
+  augroup END
+
   " Enabling VIM to load plugins and indention rules based on the detected
   " filetype.
   filetype plugin indent on
