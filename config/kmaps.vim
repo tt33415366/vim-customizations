@@ -33,3 +33,8 @@ if has("autocmd")
         \ | exec "vnoremap <leader>te :Tabularize /=\<CR>"
         \ | endif
 endif
+
+noremap <C-Up> :PreviewScroll -1<cr>
+noremap <C-Down> :PreviewScroll +1<cr>
+inoremap <C-Up> <c-\><c-o>:PreviewScroll -1<cr>
+inoremap <C-Down> <c-\><c-o>:PreviewScroll +1<cr>
