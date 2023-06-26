@@ -66,6 +66,10 @@ Here's how to show, set, and reset vim's variables:
 ```vim
 :verbose i/n/vmap <hot-key>
 ```
+#### Figuring out the key notations
+```vim
+:help key-notation
+```
 ### Profiling plugin/function loaded with VIM
 #### Using the builtin `profile` function directly
 ```vim
