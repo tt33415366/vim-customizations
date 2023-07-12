@@ -1,4 +1,4 @@
-Plug 'preservim/tagbar', { 'for': [ 'c', 'cpp', 'h', 'sh', 'js', 'javascript', 'python' ] }
+Plug 'preservim/tagbar'
 " Sort tags by their order in the source file. Press 's' to sort them
 " alphabetically.
 let g:tagbar_sort = 0
