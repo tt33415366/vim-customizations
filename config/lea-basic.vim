@@ -22,6 +22,7 @@ if has("extra_search")
   " so far, matches.
   set incsearch
 endif
+set cursorline
 set tag=tags;
 set autochdir
 set autowrite   " Automatically save before commands like :next and :make
@@ -113,8 +114,6 @@ if has("autocmd")
   " filetype.
   filetype plugin indent on
 endif
-
-
 
 " gVIM specific
 if has("gui_running")
