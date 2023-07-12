@@ -19,3 +19,4 @@ let g:airline_symbols.linenr = ' LN:'
 " set laststatus=2
 " set showtabline=2
 set noshowmode
+let g:airline_theme = 'badwolf'
