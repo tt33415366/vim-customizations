@@ -22,7 +22,11 @@ if has("extra_search")
   " so far, matches.
   set incsearch
 endif
+
+" Hightline the line number of the cursor line only
 set cursorline
+set cursorlineopt=number
+
 set tag=tags;
 set autochdir
 set autowrite   " Automatically save before commands like :next and :make
