@@ -48,6 +48,7 @@ source $HOME/.vim/config/vim-visual-star-search.vim
 source $HOME/.vim/config/coc.vim
 source $HOME/.vim/config/indent.vim
 source $HOME/.vim/config/tabular.vim
+source $HOME/.vim/config/vim-gitgutter.vim
 ```
 ## Misc.
 ### Operating on vim's variables
