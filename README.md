@@ -252,3 +252,22 @@ three = 3
 four  = 4
 ```
 
+### vim-airline
+
+Lean & mean status/tabline for vim that's light as air.
+
+#### Extensions
+
+```vim
+" Show extensions
+:AirlineExtensions
+" Disable/Enable extensions
+:let g:airline#extensions#<extensions>#enabled=0/1
+```
+
+#### Themes
+
+```vim
+:let g:airline_theme='badwolf'
+```
+
