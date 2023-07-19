@@ -32,6 +32,12 @@ if has("autocmd")
         \ | exec "nnoremap <leader>te :Tabularize /=\<CR>"
         \ | exec "vnoremap <leader>te :Tabularize /=\<CR>"
         \ | endif
+  " Hunks manipuate
+  autocmd VimEnter * if exists(":SignifyToggle")
+        \ | exec "nnoremap <leader>hd :SignifyDiff<cr>"
+        \ | exec "nnoremap <leader>hp :SignifyHunkDiff<cr>"
+        \ | exec "nnoremap <leader>hu :SignifyHunkUndo<cr>"
+        \ | endif
 endif
 
 noremap <C-Up> :PreviewScroll -1<cr>
