@@ -135,6 +135,21 @@ git checkout Coc.nvim-v0.0.81
 :CocCommand workspace.showOutput
 ```
 
+#### Using coc-marketplace
+
+  coc.nvim extensions marketplace.
+
+  - search keywords:coc.nvim from npmjs.com, display extensions in coc-lists
+  - extension name starts with √ means installed already, with an uninstall action
+  - extension name starts with x means uninstalled, with an install action
+  - extension name ends with * is published by @chemzqm, IMO, is official
+
+  ```vim
+:CocInstall coc-marketplace
+  ```
+
+  _You can `tab` on an extension to do `install`, `uninstall`, `homepage` actions._
+
 ### Enabling C/C++/Objective-C autocompletion with Coc
 
 ```vim
