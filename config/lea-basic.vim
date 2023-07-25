@@ -37,6 +37,12 @@ set cmdheight=2 " Avoid the annoying `hit-enter` message
 " values occationally, which might be very inconvenient, fixed setting it
 " here.
 set backspace=indent,eol,start
+" Do not try to connect to the X-Server, it may slow down the vim startup a
+" lot, while you got an broken X-Server.
+" MobaXterm's `X11 Forwarding` option is enabled by default, but we don't
+" always got a working X-Server on our computers.
+" References `:help clipboard` for more details.
+set clipboard=exclude:.*
 filetype on
 
 if has("viminfo")
