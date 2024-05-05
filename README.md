@@ -286,3 +286,15 @@ Lean & mean status/tabline for vim that's light as air.
 :let g:airline_theme='badwolf'
 ```
 
+### ale
+
+ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking and semantic errors) in NeoVim 0.6.0+ 
+and Vim 8.0+ while you edit your text files, and acts as a Vim Language Server Protocol client.
+
+#### How can I see what ALE has configured for the current file?
+
+Run the following to see what is currently configured:
+
+```vim
+:ALEInfo
+```
