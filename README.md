@@ -49,6 +49,7 @@ source $HOME/.vim/config/coc.vim
 source $HOME/.vim/config/indent.vim
 source $HOME/.vim/config/tabular.vim
 source $HOME/.vim/config/vim-signify.vim
+source $HOME/.vim/config/ale.vim
 ```
 ## Misc.
 ### Operating on vim's variables
