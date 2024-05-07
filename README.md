@@ -160,7 +160,16 @@ This required clangd to work with, you could install it with the following comma
 ```shell
 sudo apt install clangd
 ```
+*You can also install `clangd` via Coc with the following command:*
+
+```vim
+:CocCommand clangd.install
+```
+
+
+
 #### Project setup
+
 Although clangd can work out of box for most of simple projects, it is recommanded to generate a `compile_commands.json` for a new project, and this file can be easily generated within a few steps:
 - CMake based project
 ```shell
@@ -299,3 +308,15 @@ Run the following to see what is currently configured:
 ```vim
 :ALEInfo
 ```
+
+#### Supported languages and their suggested linters
+
+*Here's only a partial languages list that ale supported, check the full list out by viewing its document or the `ale_linters` directory.*
+
+| Language | Linter                        | Notes |
+| -------- | ----------------------------- | ----- |
+| C/C++    | `clang-tidy`                  |       |
+| Shell    | `shellcheck`                  |       |
+| Python   | `pyflakes`/`pyright`/`pylint` |       |
+| Makefile | `checkmake`                   |       |
+
