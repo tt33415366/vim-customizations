@@ -149,7 +149,11 @@ git checkout Coc.nvim-v0.0.81
 :CocInstall coc-marketplace
   ```
 
-  _You can `tab` on an extension to do `install`, `uninstall`, `homepage` actions._
+##### Usage
+
+  - `:CocList marketplace` list all available extensions
+  - `:CocList marketplace python` to search extension that name contains `python`.
+  - _You can `tab` on an extension to do `install`, `uninstall`, `homepage` actions._
 
 ### Enabling C/C++/Objective-C autocompletion with Coc
 
