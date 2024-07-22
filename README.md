@@ -112,7 +112,8 @@ sudo apt install npm
 sudo npm install -g n
 sudo n stable
 ```
-N.B. stable can be changed to latest, if you want the newest one of nodejs.
+N.B. stable can be changed to latest, if you prefer the newest one of nodejs.
+- Coc.vim requires a minimun version of nodejs to be v16.18.0.
 
 ##### Possible Errors
 
