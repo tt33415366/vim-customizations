@@ -171,7 +171,7 @@ sudo apt install clangd
 :CocCommand clangd.install
 ```
 
-
+- The **InlayHint** feature might be a bit noising at sometimes, using `document.toggleInlayHint` to toggle it on or off. 
 
 #### Project setup
 
