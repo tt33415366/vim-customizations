@@ -17,5 +17,6 @@ jobs:
         id: mirror
         uses: tt33415366/github-mirror-action@v1
         with:
-          origin: 'https://gitlab.com/tt33415366/vim-customizations.git'
+          # Gitlab stop service at China, stop the sync now.
+          # origin: 'https://gitlab.com/tt33415366/vim-customizations.git'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
