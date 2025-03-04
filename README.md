@@ -223,6 +223,12 @@ Diagnostics:
 
 - N.B. The indents in the yaml file **MUST** be `<TAB>`.
 
+- You might need to append the something link these into the `.clangd` if you encounter any flags parsing error while cross-compiling.
+```yaml
+CompileFlags:
+  Remove: [-mabi=lp64, -fno-allow-store-data-races, -fconserve-stack]
+```
+
 ##### .clang-format
 
 [Clang-Format Style Options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html#) describes configurable formatting style options supported by [LibFormat](https://clang.llvm.org/docs/LibFormat.html) and [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html).
